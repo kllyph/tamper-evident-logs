@@ -1,4 +1,4 @@
-#makes sure your WSL environment has the developer tools
+#makes sure WSL environment has the developer tools
 
 bootstrap:
 	@echo "Bootstrapping project..."
