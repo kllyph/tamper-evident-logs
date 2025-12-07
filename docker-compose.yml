@@ -1,1 +1,11 @@
 
+version: "3.9"
+services:
+  app:
+    build: .
+    environment:
+      MODE: "text"
+      ALGO: "sha256"
+      INPUT_TEXT: "Hello from compose"
+    volumes:
+      - ./data:/app/data

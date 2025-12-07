@@ -1,9 +1,16 @@
-#makes sure WSL environment has the developer tools
+.PHONY: up demo test down clean
 
-bootstrap:
-	@echo "Bootstrapping project..."
-	@sudo apt update && sudo apt install -y build-essential docker-compose
-	@echo "Environment ready."
+up:
+	docker-compose up -d --build
 
+demo:
+	docker-compose exec app python -m src.app
 
+test:
+	docker-compose exec app pytest -q --disable-warnings --maxfail=1
 
+down:
+	docker-compose down
+
+clean:
+	rm -rf data/output/*
