@@ -1,6 +1,6 @@
 from pathlib import Path
 from .hashing import hash_bytes, hash_file
-from .logging_utils import append_log
+from .logging import append_log
 from .metrics import export_metrics
 from .security import validate_input_text, validate_algo
 

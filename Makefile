@@ -4,7 +4,7 @@ up:
 	docker-compose up -d --build
 
 demo:
-	docker-compose exec app python -m src.app
+	docker-compose run --rm app python -m src.app
 
 test:
 	docker-compose exec app pytest -q --disable-warnings --maxfail=1
