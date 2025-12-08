@@ -2,7 +2,7 @@
 import csv, json, time, hmac, hashlib, os
 from typing import Dict
 
-LOG_CSV_PATH = os.getenv("LOG_CSV_PATH", "/app/data/output/logs.csv")
+LOG_CSV_PATH = os.getenv("LOG_CSV_PATH", "data/output/logs.csv")
 LOG_SECRET = os.getenv("LOG_SECRET", "dev-secret-key")
 
 # simple in-process sequence counter
