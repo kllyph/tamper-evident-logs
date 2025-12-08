@@ -27,10 +27,11 @@ HEADER_BASE_FIELDS = [
 ]
 
 def _compute_sig(row: dict) -> str:
-    base = {k: row.get(k, "") for k in HEADER_BASE_FIELDS}
+    # Build base record with same fields and normalize to strings
+    base = {k: str(row.get(k, "")) for k in HEADER_BASE_FIELDS}
     payload = json.dumps(base, sort_keys=True).encode()
     return hmac.new(LOG_SECRET.encode(), payload, hashlib.sha256).hexdigest()
-
+    
 def verify_logs() -> dict:
     total = 0
     invalid = 0
