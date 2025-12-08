@@ -179,8 +179,6 @@ All logs and evaluation artifacts remain inside Docker:
 - no production log ingestion
 - synthetic data only
 
-This satisfies CECS 478 ethical guidelines.
-
 ---
 
 ## What Works (Current State)
