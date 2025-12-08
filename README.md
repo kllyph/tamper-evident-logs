@@ -182,35 +182,35 @@ All logs and evaluation artifacts remain inside Docker:
 ---
 
 ## What Works (Current State)
-✔ ### End-to-end vertical slice
+### ✔ End-to-end vertical slice
 `make demo` runs:
 1. app ingestion + hashing
 2. tamper-evident logging
 3. verification
 4. evaluation scenarios
 
-✔ ### Signatures now match correctly
+### ✔ Signatures now match correctly
 
 `invalid_signatures:` 0 for untouched log files.
 
-✔ ### Evaluation achieves desired behavior
+### ✔ Evaluation achieves desired behavior
 - Clean → OK
 - Tampered → FAIL
 
-✔ ### CI is fully integrated
+### ✔ CI is fully integrated
 - Unit tests
 - Negative tests
 - Coverage
 - Build & test workflow passes
 
-✔ ### Docker reproducibility
+### ✔ Docker reproducibility
 
 Anyone can clone and run everything with:
 ```bash
 make up && make demo
 ```
 
-✔ ### Evidence collection
+### ✔ Evidence collection
 Artifacts stored in:
 ```arduino
 artifacts/release/
