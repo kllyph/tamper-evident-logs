@@ -23,7 +23,9 @@ HEADER = [
 ]
 
 def _sign_record(record: Dict) -> str:
-    msg = json.dumps(record, sort_keys=True).encode()
+    # Normalize everything to strings so logging + verification match
+    base = {k: str(v) for k, v in record.items()}
+    msg = json.dumps(base, sort_keys=True).encode()
     return hmac.new(LOG_SECRET.encode(), msg, hashlib.sha256).hexdigest()
 
 def append_log(event: str, details: Dict):
