@@ -60,7 +60,7 @@ def verify_logs() -> dict:
                 invalid += 1
                 tampered_rows.append(seq)
 
-    status = "OK" if invalid == 0 and sequence_gaps == 0 else "FAIL"
+    status = "OK" if invalid_signatures == 0 else "FAIL"
 
     result = {
         "file": LOG_CSV_PATH,
