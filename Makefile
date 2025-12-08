@@ -1,11 +1,13 @@
+.PHONY: up demo
+
 up:
 	docker-compose build
 	docker-compose up -d
 
 demo:
-	# 1) run main pipeline (uses env from compose)
+	@echo ">>> Running main pipeline"
 	docker-compose run --rm app python -m src.app
-	# 2) verify logs
+	@echo ">>> Verifying logs"
 	docker-compose run --rm app python -m src.verify_logs
-	# 3) run evaluation scenarios
+	@echo ">>> Running evaluation scenarios"
 	docker-compose run --rm app python -m src.evaluate
