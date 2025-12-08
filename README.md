@@ -1,10 +1,10 @@
-# Final Project
+# Final Project: Combined Alpha–Beta Integrated Release
 
 **Course:** CECS 478 (Sec. 01)
 
 **Professor:** Samuel Addington
 
-**Date:** [add due date]
+**Date:** 12/07/2025
 
 **Authors:**
 
@@ -13,7 +13,7 @@
 
 ---
 
-# tamper-evident-logs
+## Project Overview: Tamper-evident logs
 
 ## Setup
 Run the following to bootstrap the environment:
