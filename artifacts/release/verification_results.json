@@ -1,0 +1,11 @@
+{
+  "file": "/app/data/output/logs.csv",
+  "total_records": 3,
+  "invalid_signatures": 1,
+  "sequence_gaps": 0,
+  "tampered_rows": [
+    5
+  ],
+  "status": "FAIL",
+  "verified_at": "2025-12-08T08:10:14.066254Z"
+}
